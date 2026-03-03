@@ -4,7 +4,7 @@ const frukostItems = [
         description:
             "Ferskt brød, smør, ost, skinke, kokt egg, yoghurt med granola og sesongens frukt.",
         price: 149,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
@@ -12,7 +12,7 @@ const frukostItems = [
         description:
             "Kremet havregraut toppa med honning, rista nøtter og friske bær.",
         price: 89,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
@@ -20,7 +20,7 @@ const frukostItems = [
         description:
             "Rista surdeigsbrød med most avokado, røykelaks, sitron og friske urter.",
         price: 139,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
@@ -28,7 +28,7 @@ const frukostItems = [
         description:
             "Nysteikte pannekaker serverte med lønnesirup og bærkompott.",
         price: 119,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
 ];
@@ -38,7 +38,7 @@ const lunsjItems = [
         description:
             "Handpilla reker på grovbrød med majones, salat, sitron og frisk dill.",
         price: 189,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
@@ -46,14 +46,14 @@ const lunsjItems = [
         description:
             "Mild og fyldig suppe med laks og torsk, servert med ferskt brød og smør.",
         price: 179,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
         name: "Røykelaks med eggerøre",
         description: "Norsk røykelaks med mjuk eggerøre, salat og rugbrød.",
         price: 199,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
@@ -61,7 +61,7 @@ const lunsjItems = [
         description:
             "Saftig karbonade med steikt lauk, salat og sylteagurk på landbrød.",
         price: 169,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
 ];
@@ -70,28 +70,28 @@ const drikkeItems = [
         name: "Kaffi",
         description: "Nykverna kaffi av høg kvalitet.",
         price: 49,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
         name: "Te",
         description: "Eit utval av svarte, grøne og urtete-sortar.",
         price: 45,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
         name: "Varm kakao med krem",
         description: "Fyldig kakao toppa med piska krem.",
         price: 55,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
     {
         name: "Eplemost",
         description: "Lokalprodusert eplemost.",
         price: 59,
-        imgSrc: "./images/icon.png",
+        imgSrc: "./images/will smith ai spaghetti.png",
         imgAlt: "img alt text 1",
     },
 ];
@@ -108,21 +108,23 @@ function populateMenuItems(menu, items) {
         item.classList.add("item");
         dl.appendChild(item);
 
-        var itemTextContainer = document.createElement("div");
-        itemTextContainer.classList.add("itemTextContainer");
-        item.appendChild(itemTextContainer);
-
-        var name = document.createElement("dt");
-        name.innerHTML = e.name + " - " + e.price + " kr";
-        itemTextContainer.appendChild(name);
-
-        var description = document.createElement("dd");
-        description.innerHTML = e.description;
-        itemTextContainer.appendChild(description);
-
         var img = document.createElement("img");
         img.src = e.imgSrc;
         img.alt = e.imgAlt;
         item.appendChild(img);
+
+        var itemTextContainer = document.createElement("div");
+        itemTextContainer.classList.add("itemTextContainer");
+        item.appendChild(itemTextContainer);
+
+        var dt = document.createElement("dt");
+        itemTextContainer.appendChild(dt);
+        var name = document.createElement("h3");
+        name.innerHTML = e.name + " - " + e.price + " kr";
+        dt.appendChild(name);
+
+        var dd = document.createElement("dd");
+        dd.innerHTML = e.description;
+        itemTextContainer.appendChild(dd);
     });
 }

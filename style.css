@@ -4,13 +4,15 @@
     --mainFontFamily: Lora;
     --backgroundColor: rgb(32, 32, 32);
     --backgroundColorLightMode: rgb(128, 128, 128);
-    --cardBackgroundColor: rgba(48, 48, 48, 0.3);
+    --cardBackgroundColor: rgba(48, 48, 48, 0.5);
     --cardBackgroundColorLightMode: rgba(136, 136, 136, 0.3);
     --textColor: rgb(200, 200, 200);
     --textColorLightMode: rgb(32, 32, 32);
     --hoverTextColor: rgb(64, 64, 200);
     --boxShadow: 0 4px 6px black;
     --backgroundImage: url(https://images.unsplash.com/photo-1550684376-efcbd6e3f031?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    --itemPadding: 5px;
+    --itemMargin: 5px;
 }
 
 * {
@@ -22,7 +24,7 @@
 }
 
 body {
-    background-image: var(--backgroundImage);
+    /* background-image: var(--backgroundImage); */
     /* incase background image doesn't work */
     background-color: var(--backgroundColor);
 }
@@ -35,8 +37,8 @@ nav {
     margin: 15px;
     display: flex;
     align-items: center;
+    background-color: rgb(40, 40, 40);
     /* background-color: var(--cardBackgroundColor); */
-    background-color: rgb(32, 32, 32);
     position: sticky;
     top: 15px;
 }
@@ -49,6 +51,10 @@ nav a {
 
 section {
     margin: 20px 0;
+}
+
+dd {
+    margin-left: 15px;
 }
 
 article,
@@ -64,8 +70,8 @@ nav a:hover {
 .item {
     display: flex;
     flex-direction: row;
-    padding: 5px;
-    margin: 5px;
+    padding: var(--itemPadding);
+    margin: var(--itemMargin);
     background-color: var(--cardBackgroundColor);
     align-items: center;
     box-shadow: var(--boxShadow);
@@ -82,6 +88,8 @@ section .item {
 .item img {
     order: -1;
     max-width: 30%;
+    height: 100%;
+    object-fit: cover;
     box-shadow: var(--boxShadow);
 }
 
@@ -92,35 +100,33 @@ dl {
     justify-content: space-between;
 }
 
-dl dt {
-    font-weight: bold;
-    font-size: large;
-}
-
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 
     #frukost .item,
     #lunsj .item,
     #drikke .item {
-        /* width: 45vw; */
-        width: calc(45vw + 4px);
+        /* 2 items per row */
+        /* 50% - padding and margin */
+        width: calc(50% - (var(--itemPadding) + var(--itemMargin)) * 2);
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
 
     #frukost .item,
     #lunsj .item,
     #drikke .item {
-        width: calc(30vw + 3px);
+        /* 3 items per row */
+        width: calc(100%/3 - (var(--itemPadding) + var(--itemMargin)) * 2);
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1800px) {
 
     #frukost .item,
     #lunsj .item,
     #drikke .item {
-        width: calc(23vw + 1px);
+        /* 4 items per row */
+        width: calc(25% - (var(--itemPadding) + var(--itemMargin)) * 2);
     }
 }
