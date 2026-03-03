@@ -1,3 +1,5 @@
+console.debug("hello");
+
 const frukostItems = [
     {
         name: "Frukosttallerken",
