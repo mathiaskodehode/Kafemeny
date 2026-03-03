@@ -71,11 +71,6 @@ nav a:hover {
     box-shadow: var(--boxShadow);
 }
 
-/* dagens */
-figure .img {
-    /* make big */
-}
-
 section .item {
     width: 100%;
 }
