@@ -2,13 +2,13 @@
 
 :root {
     --mainFontFamily: Lora;
-    --backgroundColor: rgb(32, 32, 32);
-    --backgroundColorLightMode: rgb(128, 128, 128);
-    --cardBackgroundColor: rgba(48, 48, 48, 0.5);
-    --cardBackgroundColorLightMode: rgba(136, 136, 136, 0.3);
-    --textColor: rgb(200, 200, 200);
-    --textColorLightMode: rgb(32, 32, 32);
-    --hoverTextColor: rgb(64, 64, 200);
+    --backgroundColor: rgb(132, 32, 32);
+    --backgroundColorLightMode: rgb(228, 128, 128);
+    --cardBackgroundColor: rgba(148, 48, 48, 0.5);
+    --cardBackgroundColorLightMode: rgba(236, 136, 136, 0.3);
+    --textColor: rgb(255, 255, 132);
+    --textColorLightMode: rgb(132, 32, 32);
+    --hoverTextColor: rgb(64, 64, 255);
     --boxShadow: 0 4px 6px black;
     --backgroundImage: url(https://images.unsplash.com/photo-1550684376-efcbd6e3f031?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     --itemPadding: 5px;
@@ -20,7 +20,7 @@
     color: var(--textColor);
     margin: 0;
     padding: 0;
-    /* outline: 1px red solid; */
+    /* outline: 1px blue solid; */
 }
 
 body {
@@ -37,7 +37,7 @@ nav {
     margin: 15px;
     display: flex;
     align-items: center;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(140, 40, 40);
     /* background-color: var(--cardBackgroundColor); */
     position: sticky;
     top: 15px;
