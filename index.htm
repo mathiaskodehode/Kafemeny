@@ -7,49 +7,46 @@
     <title>Kafémeny</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/icon.png">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
     <nav>
         <a href="./index.htm"><img src="./images/icon.png" alt="company logo"></a>
-        <a href="">lorem</a> |
-        <a href="">ipsum</a> |
-        <a href="">dolor</a> |
+        <a href="">lorem</a>
+        <a href="">ipsum</a>
+        <a href="">dolor</a>
         <a href="">sit</a>
     </nav>
     <main>
         <article>
             <header>
                 <h1>Dagens!</h1>
-                <figure>
-                    <img src="./images/icon.png" alt="menu item">
-                    <figcaption>nam nam go mat kom spis</figcaption>
-                </figure>
             </header>
+            <figure class="item">
+                <img src="./images/icon.png" alt="menu item">
+                <figcaption class="itemTextContainer">nam nam go mat kom spis</figcaption>
+            </figure>
         </article>
 
         <article>
             <header>
                 <h1>Menyen</h1>
             </header>
-            <Section>
+            <Section id="frukost">
                 <h2>Frukost</h2>
             </Section>
-            <Section>
+            <Section id="lunsj">
                 <h2>Lunsj</h2>
             </Section>
-            <Section>
+            <Section id="drikke">
                 <h2>Drikke</h2>
-                <dl>
-                    <dt>drikke item number 1</dt>
-                    <dd>serverast i en kopp...</dd>
-                </dl>
             </Section>
         </article>
 
     </main>
-    <hr>
     <footer>
+        <hr>
         <p>hallo@email.com</p>
         <p>(+47)12345678</p>
         <hr>

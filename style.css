@@ -1,3 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --mainFontFamily: Lora;
+    --backgroundColor: rgb(32, 32, 32);
+    --backgroundColorLightMode: rgb(128, 128, 128);
+    --cardBackgroundColor: rgba(48, 48, 48, 0.3);
+    --cardBackgroundColorLightMode: rgba(136, 136, 136, 0.3);
+    --textColor: rgb(200, 200, 200);
+    --textColorLightMode: rgb(32, 32, 32);
+    --hoverTextColor: rgb(64, 64, 200);
+    --boxShadow: 0 4px 6px black;
+    --backgroundImage: url(https://images.unsplash.com/photo-1550684376-efcbd6e3f031?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+* {
+    font-family: var(--mainFontFamily);
+    color: var(--textColor);
+    margin: 0;
+    padding: 0;
+    /* outline: 1px red solid; */
+}
+
+body {
+    background-image: var(--backgroundImage);
+    /* incase background image doesn't work */
+    background-color: var(--backgroundColor);
+}
+
+main {
+    margin: 15px 5px;
+}
+
 nav {
-    display: block;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    /* background-color: var(--cardBackgroundColor); */
+    background-color: rgb(32, 32, 32);
+    position: sticky;
+    top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+article,
+address,
+hr {
+    margin: 35px 0;
+}
+
+nav a:hover {
+    color: var(--hoverTextColor);
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--cardBackgroundColor);
+    align-items: center;
+    box-shadow: var(--boxShadow);
+}
+
+/* dagens */
+figure .img {
+    /* make big */
+}
+
+section .item {
+    width: 100%;
+}
+
+.itemTextContainer {
+    margin: 5px 15px;
+}
+
+.item img {
+    order: -1;
+    max-width: 30%;
+    box-shadow: var(--boxShadow);
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+dl dt {
+    font-weight: bold;
+    font-size: large;
+}
+
+@media (min-width: 600px) {
+
+    #frukost .item,
+    #lunsj .item,
+    #drikke .item {
+        /* width: 45vw; */
+        width: calc(45vw + 4px);
+    }
+}
+
+@media (min-width: 900px) {
+
+    #frukost .item,
+    #lunsj .item,
+    #drikke .item {
+        width: calc(30vw + 3px);
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #frukost .item,
+    #lunsj .item,
+    #drikke .item {
+        width: calc(23vw + 1px);
+    }
 }
